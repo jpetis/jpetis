@@ -11,10 +11,24 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>MiServlet</servlet-name>
-    <servlet-class>Conexion</servlet-class>
+    <!-- CONEXION MEDIANTE JDBC -->
+    <!--  <servlet-class>Conexion</servlet-class> -->
+    <!-- CONEXION MEDIANTE HIBERNATE -->
+    <servlet-class>ConexionHibernate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MiServlet</servlet-name>
     <url-pattern>/MiServlet</url-pattern>
   </servlet-mapping>
+  <listener>
+	<listener-class>ClassServletContextListener</listener-class>
+ </listener>
+ <listener>
+	<listener-class>ClassHttpSessionListener</listener-class>
+ </listener>
+  <listener>
+	<listener-class>ClassServletRequestListener</listener-class>
+ </listener>
+ 
+
 </web-app>

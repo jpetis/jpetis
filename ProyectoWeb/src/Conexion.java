@@ -46,8 +46,7 @@ public class Conexion extends HttpServlet {
 			stmt = conn.createStatement();
 			rset = stmt.executeQuery("SELECT * FROM EMPLOYEES WHERE  EMPLOYEE_ID = "+id);
 			if (rset.next()) {
-				nombre = rset.getString("first_name");
-				
+				nombre = rset.getString("first_name");	
 			}else {
 				nombre = "No existe";
 			}
