@@ -3,7 +3,16 @@
  */
 package modelo.services;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import modelo.dominio.Employees;
 import modelo.persistencia.InterfacRecuperable;
+import modelo.persistencia.SesionManager;
+import modelo.persistencia.dao.EmpleadoHibertDao;
 
 /**
  * @author Jaime Gpetis
@@ -30,6 +39,7 @@ public class EmployessServices {
 		
 
 	}
+
 
 
 }

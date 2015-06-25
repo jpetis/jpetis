@@ -14,6 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 
 /**
@@ -22,6 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Conexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private final Logger log = LogManager.getRootLogger();
 	Connection conn = null;
 	ResultSet rset = null;
 	Statement stmt = null;
@@ -37,6 +41,10 @@ public class Conexion extends HttpServlet {
 	 * 
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String valor = getServletConfig().getInitParameter("n2");
+		System.out.println("Valor s config = " + valor);
+		String valor2 = getServletContext().getInitParameter("9");
+		System.out.println("Valor s context = " + valor2);
 		String s_id = request.getParameter("numero");
 		int id = Integer.parseInt(s_id);
 		String nombre = null;
@@ -49,7 +57,7 @@ public class Conexion extends HttpServlet {
 				nombre = rset.getString("first_name");	
 			}else {
 				nombre = "No existe";
-			}
+			}Pool.liberarRecursos(conn, stmt, rset);
 		response.setContentType("text/html");
 		pw = response.getWriter();
 		pw.println(nombre);

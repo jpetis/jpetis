@@ -1,6 +1,9 @@
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * 
  */
@@ -11,7 +14,7 @@ import javax.servlet.ServletRequestListener;
  * 
  */
 public class ClassServletRequestListener implements ServletRequestListener{
-
+	private final Logger log = LogManager.getRootLogger();
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequestListener#requestDestroyed(javax.servlet.ServletRequestEvent)
 	 */

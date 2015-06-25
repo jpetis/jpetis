@@ -2,33 +2,96 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>ProyectoWeb</display-name>
   <welcome-file-list>
-    <welcome-file>indice.html</welcome-file>
+    <welcome-file>loginHTML.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+   <servlet>
+    <servlet-name>ServletListaDepartamentos</servlet-name>
+    <servlet-class>ServletListaDepartamentos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletListaDepartamentos</servlet-name>
+    <url-pattern>/ServletListaDepartamentos</url-pattern>
+  </servlet-mapping>
   <servlet>
-    <servlet-name>MiServlet</servlet-name>
-    <!-- CONEXION MEDIANTE JDBC -->
-    <!--  <servlet-class>Conexion</servlet-class> -->
-    <!-- CONEXION MEDIANTE HIBERNATE -->
+    <servlet-name>ServletSesionesActivas</servlet-name>
+    <servlet-class>ServletSesionesActivas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletSesionesActivas</servlet-name>
+    <url-pattern>/ServletSesionesActivas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletSession</servlet-name>
+    <servlet-class>ServletSession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletSession</servlet-name>
+    <url-pattern>/ServletSession</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>2</session-timeout>
+  </session-config>
+  <servlet>
+    <servlet-name>ServletAutenticacion</servlet-name>
+    <servlet-class>ServletAutenticacion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAutenticacion</servlet-name>
+    <url-pattern>/ServletAutenticacion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MiServletHiber</servlet-name>
     <servlet-class>ConexionHibernate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>MiServlet</servlet-name>
-    <url-pattern>/MiServlet</url-pattern>
+    <servlet-name>MiServletHiber</servlet-name>
+    <url-pattern>/MiServletHiber</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MiServletJDBC</servlet-name>
+    <servlet-class>Conexion</servlet-class>
+    <init-param>
+      <param-name>n2</param-name>
+      <param-value>200</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MiServletJDBC</servlet-name>
+    <url-pattern>/MiServletJDBC</url-pattern>
   </servlet-mapping>
   <listener>
-	<listener-class>ClassServletContextListener</listener-class>
- </listener>
- <listener>
-	<listener-class>ClassHttpSessionListener</listener-class>
- </listener>
+    <listener-class>ClassServletContextListener</listener-class>
+  </listener>
   <listener>
-	<listener-class>ClassServletRequestListener</listener-class>
- </listener>
- 
-
+    <listener-class>ClassHttpSessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>ClassServletRequestListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>mifiltroHiber</filter-name>
+    <filter-class>ClaseFiltrosHiber</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>mifiltroHiber</filter-name>
+    <url-pattern>/ConexionHibernate</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>mifiltroJDBC</filter-name>
+    <filter-class>ClaseFiltrosJDBC</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>mifiltroJDBC</filter-name>
+    <url-pattern>/Conexion</url-pattern>
+  </filter-mapping>
+  <context-param>
+    <param-name>9</param-name>
+    <param-value>5</param-value>
+  </context-param>
 </web-app>

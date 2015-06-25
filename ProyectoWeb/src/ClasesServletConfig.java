@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
  *
  * 
  */
-public class ClasseWeb1 extends HttpServlet{
+public class ClasesServletConfig extends HttpServlet {
 	private final Logger log = LogManager.getRootLogger();
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -26,11 +26,10 @@ public class ClasseWeb1 extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		req.getParameter("nombre");
-		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
-			out.println("A llamado a doGet y paso mi nombre es ........."+req.getParameter("nombre"));
-	System.out.println(req.getParameter("nombre"));
+		String valor = req.getServletContext().getInitParameter("username");
+		
+		
+		
 	
 	}
 	
@@ -40,11 +39,7 @@ public class ClasseWeb1 extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		req.getParameter("nombre");
-		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
-		out.println("A llamado a doPost y paso mi nombre es ........."+req.getParameter("nombre"));
-		System.out.println(req.getParameter("nombre"));
+		
 		
 		
 	}

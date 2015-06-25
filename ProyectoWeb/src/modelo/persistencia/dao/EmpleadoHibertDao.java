@@ -3,10 +3,13 @@
  */
 package modelo.persistencia.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import modelo.dominio.Employees;
+import modelo.persistencia.InstruccionesSQL;
 import modelo.persistencia.InterfacRecuperable;
 import modelo.persistencia.SesionManager;
 import modelo.services.EmployessServices;
@@ -38,5 +41,6 @@ public class EmpleadoHibertDao implements InterfacRecuperable {
 		return empleado;
 		
 	}
+
 
 }
