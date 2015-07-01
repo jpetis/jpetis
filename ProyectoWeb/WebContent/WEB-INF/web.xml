@@ -2,15 +2,70 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>ProyectoWeb</display-name>
   <welcome-file-list>
-    <welcome-file>loginHTML.html</welcome-file>
+    <welcome-file>PaginaErrores.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-   <servlet>
+  <!-- ERRORES -->
+ <error-page>
+	<error-code>500</error-code>
+	 <location>/ServletError</location> 
+</error-page>
+
+  <!-- ERRORES -->
+
+  <servlet>
+    <servlet-name>ServletError</servlet-name>
+    <servlet-class>ServletError</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletError</servlet-name>
+    <url-pattern>/ServletError</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletCookies</servlet-name>
+    <servlet-class>ServletCookies</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCookies</servlet-name>
+    <url-pattern>/ServletCookies</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletEsPrimo</servlet-name>
+    <servlet-class>ServletEsPrimo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletEsPrimo</servlet-name>
+    <url-pattern>/ServletEsPrimo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletNoPrimo</servlet-name>
+    <servlet-class>ServletNoPrimo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletNoPrimo</servlet-name>
+    <url-pattern>/ServletNoPrimo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletErrorFormato</servlet-name>
+    <servlet-class>ServletErrorFormato</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletErrorFormato</servlet-name>
+    <url-pattern>/ServletErrorFormato</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Servletx</servlet-name>
+    <servlet-class>Servletx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servletx</servlet-name>
+    <url-pattern>/Servletx</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>ServletListaDepartamentos</servlet-name>
     <servlet-class>ServletListaDepartamentos</servlet-class>
   </servlet>

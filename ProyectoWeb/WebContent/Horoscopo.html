@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="1" style="width:100%">
+  <td>
+  
+<select id="signo1" name="signo1">
+<option value="1">ARIES</option>
+<option value="2">TAURO</option>
+<option value="3">GEMINIS</option>
+<option value="4">CANCER</option>
+<option value="5">LEO</option>
+<option value="6">VIRGO</option>
+<option value="7">LIBRA</option>
+<option value="8">ESCORPIO</option>
+<option value="9">SAGITARIO</option>
+<option value="10">CAPRICORNIO</option>
+<option value="11">ACUARIO</option>
+<option value="12">PISCIS</option>
+</select>
+
+  </td>
+  <td>
+<select id="signo1" name="signo1">
+<option value="1">ARIES</option>
+<option value="2">TAURO</option>
+<option value="3">GEMINIS</option>
+<option value="4">CANCER</option>
+<option value="5">LEO</option>
+<option value="6">VIRGO</option>
+<option value="7">LIBRA</option>
+<option value="8">ESCORPIO</option>
+<option value="9">SAGITARIO</option>
+<option value="10">CAPRICORNIO</option>
+<option value="11">ACUARIO</option>
+<option value="12">PISCIS</option>
+</select>
+
+  </td>
+  <td>
+<form action="/horoscopo/show" name="signoForm" method="post">
+<label for="fecha">Introduce tu fecha de nacimiento</label>
+<input id="fecha" type="text" onclick="if(document.signoForm.fecha.value=='dd/mm/aaaa') { document.signoForm.fecha.value = ''; }" value="dd/mm/aaaa" name="fecha">
+<input class="boton" type="submit" value="Ir" name="enviar">
+</form>
+  </td>
+</table>
+</body>
+</html>
