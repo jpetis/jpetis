@@ -10,5 +10,6 @@ package modelo.persistencia;
  */
 public interface InterfacRecuperable {
 	Object leerEmpleado(int id);
+	Object leerDepartamentos(int id);
 
 }

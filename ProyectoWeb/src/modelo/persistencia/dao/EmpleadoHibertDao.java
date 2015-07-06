@@ -41,6 +41,14 @@ public class EmpleadoHibertDao implements InterfacRecuperable {
 		return empleado;
 		
 	}
+	/* (non-Javadoc)
+	 * @see modelo.persistencia.InterfacRecuperable#leerDepartamentos(int)
+	 */
+	@Override
+	public Object leerDepartamentos(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 }

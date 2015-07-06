@@ -48,17 +48,22 @@ public class ServletListaDepartamentos extends HttpServlet {
     		Session session = SesionManager.obtenerSesionNueva();
     		List<Departments> l_d =  session.createSQLQuery("select * from Departments").addEntity(Departments.class).list();
     		Departments d = null;
+    		resp.setContentType("text/html");
     		PrintWriter pw = resp.getWriter();
-    		pw.println("<select>");
+    		pw.println("<form action=\"ServletDepartamentosYempleados\">");
+    		pw.println("<select name=\"departamento\">");
     		Iterator it = l_d.iterator();
     		while (it.hasNext()) {
 				d = (Departments) it.next();
 				pw.println("<option value = "+ d.getDepartmentId()+">"+ d.getDepartmentName()+"</option>");
 			}
-    		pw.println("<select>");
-    		resp.setContentType("text/html");
-    		RequestDispatcher rd = req.getRequestDispatcher("/ServletSesionesActivas");
-    		rd.include(req, resp);
+    		pw.println("</select>");
+    		pw.println("<input type=\"submit\" value=\"Submit\">"+
+    				"</form>");
+
+    		
+//    		RequestDispatcher rd = req.getRequestDispatcher("/ServletSesionesActivas");
+//    		rd.include(req, resp);
     	}
     	
     

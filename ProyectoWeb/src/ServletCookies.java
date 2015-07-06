@@ -28,7 +28,10 @@ public class ServletCookies extends HttpServlet {
 	 * @return devuelvo la cookie antigua si existia en la petición 
 	 * y sino envio una nueva con valor 0
 	 */
-	private Cookie  existe_cookie(HttpServletRequest req) {
+	private Cookie  existe_cookie(HttpServletRequest req,String nomCookie) {
+		Cookie cookie = null;
+		Cookie[] array_cookie = null;
+		return cookie;
 		
 	} 
 	/**CÓDIGO ERRONEO DE RECOGIDA DE COOKIES*/

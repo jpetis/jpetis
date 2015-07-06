@@ -9,14 +9,26 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!-- ERRORES -->
- <error-page>
-	<error-code>500</error-code>
-	 <location>/ServletError</location> 
-</error-page>
-
-  <!-- ERRORES -->
-
+  <error-page>
+    <error-code>500</error-code>
+    <location>/ServletError</location>
+  </error-page>
+  <servlet>
+    <servlet-name>ServletDepartamentosYempleados</servlet-name>
+    <servlet-class>ServletDepartamentosYempleados</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDepartamentosYempleados</servlet-name>
+    <url-pattern>/ServletDepartamentosYempleados</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServlteEmpleadoJSP</servlet-name>
+    <servlet-class>ServlteEmpleadoJSP</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServlteEmpleadoJSP</servlet-name>
+    <url-pattern>/ServlteEmpleadoJSP</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>ServletError</servlet-name>
     <servlet-class>ServletError</servlet-class>
@@ -26,12 +38,12 @@
     <url-pattern>/ServletError</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>ServletCookies</servlet-name>
-    <servlet-class>ServletCookies</servlet-class>
+    <servlet-name>ServletHoraYFecha</servlet-name>
+    <servlet-class>ServletHoraYFecha</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ServletCookies</servlet-name>
-    <url-pattern>/ServletCookies</url-pattern>
+    <servlet-name>ServletHoraYFecha</servlet-name>
+    <url-pattern>/ServletHoraYFecha</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>ServletEsPrimo</servlet-name>

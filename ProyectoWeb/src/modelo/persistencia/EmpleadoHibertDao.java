@@ -6,6 +6,7 @@ package modelo.persistencia;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import modelo.dominio.Departments;
 import modelo.dominio.Employees;
 import modelo.persistencia.InterfacRecuperable;
 import modelo.persistencia.SesionManager;
@@ -38,6 +39,19 @@ public class EmpleadoHibertDao implements InterfacRecuperable {
 		
 		return empleado;
 		
+	}
+	/* (non-Javadoc)
+	 * @see modelo.persistencia.InterfacRecuperable#leerDepartamentos(int)
+	 */
+	@Override
+	public Object leerDepartamentos(int id) {
+		Session session = null;
+		Transaction transaction = null;
+		Departments departments = null;
+		session = SesionManager.obtenerSesionNueva();
+		departments = (Departments) session.get(Departments.class, id);
+		
+		return departments;
 	}
 
 }

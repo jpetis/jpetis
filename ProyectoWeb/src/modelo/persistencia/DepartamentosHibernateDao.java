@@ -1,31 +1,31 @@
 /**
  * 
  */
-package modelo.persistencia.dao;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
-import modelo.persistencia.InterfacRecuperable;
+package modelo.persistencia;
 
 /**
  * @author Jaime Gpetis
  *
  * 
  */
-public class EmpleadoJDBCDao implements InterfacRecuperable {
-	Connection conn = null;
-	ResultSet rset = null;
-	Statement stmt = null;
+public class DepartamentosHibernateDao implements InterfacRecuperable{
+
+	/**
+	 * 
+	 */
+	public DepartamentosHibernateDao() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/* (non-Javadoc)
 	 * @see modelo.persistencia.InterfacRecuperable#leerEmpleado(int)
 	 */
 	@Override
-	public Object leerEmpleado(int n) {
-		
+	public Object leerEmpleado(int id) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 	/* (non-Javadoc)
 	 * @see modelo.persistencia.InterfacRecuperable#leerDepartamentos(int)
 	 */
@@ -34,5 +34,4 @@ public class EmpleadoJDBCDao implements InterfacRecuperable {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 }

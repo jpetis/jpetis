@@ -24,4 +24,13 @@ public class EmpleadoJPADao implements InterfacRecuperable{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	/* (non-Javadoc)
+	 * @see modelo.persistencia.InterfacRecuperable#leerDepartamentos(int)
+	 */
+	@Override
+	public Object leerDepartamentos(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
