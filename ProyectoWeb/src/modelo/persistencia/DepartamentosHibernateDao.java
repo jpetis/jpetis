@@ -3,6 +3,11 @@
  */
 package modelo.persistencia;
 
+import modelo.dominio.Departments;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 /**
  * @author Jaime Gpetis
  *
@@ -31,7 +36,12 @@ public class DepartamentosHibernateDao implements InterfacRecuperable{
 	 */
 	@Override
 	public Object leerDepartamentos(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = null;
+		Transaction transaction = null;
+		Departments departments = null;
+		session = SesionManager.obtenerSesionNueva();
+		departments = (Departments) session.get(Departments.class, id);
+		
+		return departments;
 	}
 }

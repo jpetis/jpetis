@@ -56,6 +56,7 @@ public class ServletEmpleadoEL extends HttpServlet {
 			response.setContentType("text/html");
 			request.setAttribute("empleadoBean", emp);
 			request.getRequestDispatcher("/MostrarEmpleadoEL.jsp").forward(request, response);
+			log.trace(" paso por el....................................");
 		}else{log.error("El número o carazter introducido es incorrecto");}
 		
 		

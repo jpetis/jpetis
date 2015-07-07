@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Introducca un identificador de usuario</h1>
-<form action="ServlteEmpleadoJSP" method="get">
+<form action="ServletEmpleadoEL" method="get">
 Id Usuario:<br>
 <input type="text" name="id">
 <br><br>

@@ -32,38 +32,16 @@ public class ServletListaDepartamentos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final Logger log = LogManager.getRootLogger();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ServletListaDepartamentos() {
-      super();
-      
-    }
+
     /* (non-Javadoc)
      * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
     		throws ServletException, IOException {
-    		Session session = SesionManager.obtenerSesionNueva();
-    		List<Departments> l_d =  session.createSQLQuery("select * from Departments").addEntity(Departments.class).list();
-    		Departments d = null;
-    		resp.setContentType("text/html");
-    		PrintWriter pw = resp.getWriter();
-    		pw.println("<form action=\"ServletDepartamentosYempleados\">");
-    		pw.println("<select name=\"departamento\">");
-    		Iterator it = l_d.iterator();
-    		while (it.hasNext()) {
-				d = (Departments) it.next();
-				pw.println("<option value = "+ d.getDepartmentId()+">"+ d.getDepartmentName()+"</option>");
-			}
-    		pw.println("</select>");
-    		pw.println("<input type=\"submit\" value=\"Submit\">"+
-    				"</form>");
+    	
+    	
 
-    		
-//    		RequestDispatcher rd = req.getRequestDispatcher("/ServletSesionesActivas");
-//    		rd.include(req, resp);
     	}
     	
     

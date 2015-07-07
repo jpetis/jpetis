@@ -13,6 +13,15 @@
     <error-code>500</error-code>
     <location>/ServletError</location>
   </error-page>
+ 
+    <servlet>
+    <servlet-name>ServletEmpleadoEL</servlet-name>
+    <servlet-class> ServletEmpleadoEL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletEmpleadoEL</servlet-name>
+    <url-pattern>/ServletEmpleadoEL</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>ServletDepartamentosYempleados</servlet-name>
     <servlet-class>ServletDepartamentosYempleados</servlet-class>
