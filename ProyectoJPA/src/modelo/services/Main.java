@@ -34,7 +34,7 @@ public class Main {
 			
 //			es.setiRecuperable(objeto_jdbc);
 //			es.leerEmpleado(150);
-//			
+			
 //			es.setiRecuperable(objeto_jpa);
 //			es.leerEmpleado(150);
 			
