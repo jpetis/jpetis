@@ -8,6 +8,7 @@
 <title>Mostrar Empleado</title>
 </head>
 <body>
+
 <UL>
 <LI><B>First Name:</B> ${empleadoBean.firstName}
 
