@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_79">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/DB/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/HIBERNATE/hibernate-release-4.3.10.Final/lib/required/hibernate-commons-annotations-4.0.5.Final.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://docs.jboss.org/hibernate/orm/4.3/javadocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/HIBERNATE/hibernate-release-4.3.10.Final/lib/required/hibernate-core-4.3.10.Final.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://docs.jboss.org/hibernate/orm/4.3/javadocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/Version moderna 2/log4j-api-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/Version moderna 2/log4j-core-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/Version moderna 2/log4j-web-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/log4j-all-1.3alpha-8.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
