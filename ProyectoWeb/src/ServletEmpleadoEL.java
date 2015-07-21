@@ -61,11 +61,7 @@ public class ServletEmpleadoEL extends HttpServlet {
 		
 		
 		
-//		Employee employee = new Employee();
-//		request.setAttribute("employee", employee);
-//		RequestDispatcher dispatcher = request.getRequestDispatcher
-//		("/WEB-INF/results/MostrarEmpleadoEL.jsp");
-//		dispatcher.forward(request, response);
+
 	}
 
 

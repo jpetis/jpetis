@@ -39,6 +39,15 @@ public class EmployessServices {
 		
 
 	}
+	/**
+	 * 
+	 */
+	public Object leerDepartamentos(int id) {
+		Object obj_dep = null;
+		obj_dep = this.iRecuperable.leerDepartamentos(id);
+		return obj_dep;
+
+	}
 	
 
 

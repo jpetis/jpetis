@@ -19,7 +19,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.ListView;
 
 import modelo.dominio.Departments;
+import modelo.persistencia.EmpleadoHibertDao;
+import modelo.persistencia.InterfacRecuperable;
 import modelo.persistencia.SesionManager;
+import modelo.services.EmployessServices;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,6 +36,7 @@ import org.hibernate.SessionFactory;
 public class ServletListaDepartamentos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final Logger log = LogManager.getRootLogger();
+	EmployessServices es = new EmployessServices();
        
 
     /* (non-Javadoc)
@@ -46,7 +50,13 @@ public class ServletListaDepartamentos extends HttpServlet {
     	Session session = sf.openSession();
     	log.trace("paso por la  sf.openSession()");
     	
-
+    	String s_id = req.getParameter("id");
+		int id = Integer.parseInt(s_id);
+		
+		InterfacRecuperable iRecuperable = new EmpleadoHibertDao();
+		es.setiRecuperable(iRecuperable);
+		
+		Departments dep = (Departments) es.leerDepartamentos(id);
     	
 
     	}

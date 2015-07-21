@@ -8,6 +8,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import modelo.dominio.Departments;
 import modelo.dominio.Employees;
 import modelo.persistencia.InstruccionesSQL;
 import modelo.persistencia.InterfacRecuperable;
@@ -46,8 +47,13 @@ public class EmpleadoHibertDao implements InterfacRecuperable {
 	 */
 	@Override
 	public Object leerDepartamentos(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = null;
+		Transaction transaction = null;
+		Departments departments = null;
+		
+		session = SesionManager.obtenerSesionNueva();
+		departments = (Departments) session.get(Departments.class, id);
+		return departments;
 	}
 
 
