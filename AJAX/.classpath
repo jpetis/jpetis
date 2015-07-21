@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/Version moderna 2/log4j-core-2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/Version moderna 2/log4j-web-2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/Jaime Curso Tarde Desarrolo Aplicacion sitios web dinamicos/Documentos/LOG4java/log4j-all-1.3alpha-8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.3.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
