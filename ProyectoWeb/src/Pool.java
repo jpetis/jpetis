@@ -9,15 +9,10 @@ import javax.sql.DataSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
-
-
 public class Pool {
-			//JNDI  (PARAMETRIZAR UN OBJETO EN XML) java:  - CTX(CONTEX) comp/env/ - RECURSO pool
-	private static final Logger log = LogManager.getRootLogger();
-	private static final String fuente = "java:comp/env/jdbc/pool";
 	
+	private static final String fuente = "java:comp/env/jdbc/pool";
+	private static final Logger log = LogManager.getRootLogger();
 	private static DataSource fuenteDatos = null;;
 	private static final Pool pool = new Pool ();
 	
@@ -61,7 +56,7 @@ public class Pool {
 			//fuenteDatos.
 		}
 		catch (Exception e) {
-			log.error("Imposible obtener conexión a la base de datos");
+			//log.error("Imposible obtener conexión a la base de datos");
 		}
 		return conexion;
 	}
@@ -117,3 +112,4 @@ public class Pool {
 		
 	}
 }
+
