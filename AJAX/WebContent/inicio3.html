@@ -25,6 +25,7 @@ function procesarEventos()
 			var objetoJson = JSON.parse(xmlHttp.responseText);
 			alert ("Persona = " + objetoJson.nombre);
 			alert ("Persona = " + objetoJson.edad);
+											//desserializo
 			document.getElementById("nombre").value = objetoJson.nombre;
 			document.getElementById("edad").value = objetoJson.edad;
 			

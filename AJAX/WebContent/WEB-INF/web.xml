@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-   <servlet>
+  <servlet>
     <servlet-name>CargarMenu</servlet-name>
     <servlet-class>CargarMenu</servlet-class>
   </servlet>
@@ -17,8 +17,15 @@
     <servlet-name>CargarMenu</servlet-name>
     <url-pattern>/CargarMenu</url-pattern>
   </servlet-mapping>
-  
- <servlet>
+  <servlet>
+    <servlet-name>Juego</servlet-name>
+    <servlet-class>Juego</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Juego</servlet-name>
+    <url-pattern>/Juego</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>CargaJSON</servlet-name>
     <servlet-class>CargaJSON</servlet-class>
   </servlet>
@@ -26,8 +33,7 @@
     <servlet-name>CargaJSON</servlet-name>
     <url-pattern>/CargaJSON</url-pattern>
   </servlet-mapping>
-  
-     <servlet>
+  <servlet>
     <servlet-name>CargaMenuSelect</servlet-name>
     <servlet-class>CargaMenuSelect</servlet-class>
   </servlet>
@@ -35,9 +41,7 @@
     <servlet-name>CargaMenuSelect</servlet-name>
     <url-pattern>/CargaMenuSelect</url-pattern>
   </servlet-mapping>
-  
-  
-      <servlet>
+  <servlet>
     <servlet-name>CargarTrabajadores</servlet-name>
     <servlet-class>CargarTrabajadores</servlet-class>
   </servlet>

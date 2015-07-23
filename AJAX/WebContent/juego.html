@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="ISO-8859-1">
+
+<head>
+<style>
+#div1 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div2 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div3 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div4 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div5 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div6 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left; clear: left;}
+#div7 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div8 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div9 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div10 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div11 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left; clear: left;}
+#div12 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div13 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div14 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div15 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div16 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left; clear: left;}
+#div17 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div18 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div19 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#div20 {width:150px;height:70px;padding:10px;border:1px solid #aaaaaa; float: left;}
+#drag1 {float: left;}
+
+#error {
+		visibility: hidden;
+       }
+</style>
+<script>
+
+var img_origen;
+var img_destino;
+
+var id_origen;
+var id_destino;
+
+var id_error;
+var nelementos = 10;
+
+var request = new XMLHttpRequest();
+
+function verform() 
+{ 
+document.getElementById("error").style.visibility="visible"; 
+
+} 
+
+function procesarEventos ()
+{
+	if(request.readyState==4) //ya hemos recibido respuesta del servidor
+	  {
+	      if(request.status==200)// y el código de la cabecera http es bueno
+	          {
+				var objetoJson = JSON.parse(request.responseText);
+				alert (objetoJson.mensaje);
+				
+	          }
+	      else
+	      {
+	          alert("Ha ocurrido un error"+ xmlHttp.status +":"+ xmlHttp.statusText);
+	      }
+	  }
+}
+function llamarAJSON ()
+{
+	
+	request.onreadystatechange = procesarEventos;
+	request.open('GET', 'Juego', true); //indicamos como vamos a enviar los datos, en este caso con el metodo GET al archivo meses.php?num= el valor que le indiquemos en el textbox
+	request.send(null);
+	
+	}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+
+function sale(ev) {
+	document.getElementById("error").style.visibility="hidden"; 
+	img_origen = ev.target.name;
+	id_origen = ev.target.id;
+	//ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function llega(ev) {
+	ev.preventDefault();
+   	img_destino = ev.target.name;
+   	id_destino = ev.target.id;
+   	if (img_destino.localeCompare(img_origen)==0)
+   		{
+   		 var objeto_imagen1 = document.getElementById(id_origen);
+   		 var objeto_imagen2 = document.getElementById(id_destino);
+   		 
+   		 objeto_imagen1.remove();
+   		 objeto_imagen2.remove();
+   		 nelementos = nelementos - 1;
+   		 
+   		}
+   	else{
+   		verform();
+   		alert("Vuelve a barrio sesamo");
+   		
+   	}
+    if (nelementos==0)
+    	{
+    	llamarAJSON ();
+    	}
+}
+
+
+
+</script>
+</head>
+<body>
+
+
+
+
+<div id="div1" ondragover="allowDrop(event)" draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag1" src="p1.jpg"></div>
+<div id="div2" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p6" id="drag2" src="p6.jpg"></div>
+<div id="div3" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p3" id="drag3" src="p3.jpg"></div>
+<div id="div4" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p5" id="drag4" src="p5.jpg"></div>
+<div id="div5" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p3" id="drag5" src="p3.jpg"></div>
+<div id="div6" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag6" src="p1.jpg"></div>
+
+<div id="div7" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p5" id="drag7" src="p5.jpg"></div>
+<div id="div8" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag8" src="p1.jpg"></div>
+<div id="div9" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p3" id="drag9" src="p3.jpg"></div>
+<div id="div10" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p2" id="drag10" src="p2.jpg"></div>
+<div id="div11" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p8" id="drag11" src="p8.jpg"></div>
+<div id="div12" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag12" src="p1.jpg"></div>
+
+<div id="div13" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p2" id="drag13" src="p2.jpg"></div>
+<div id="div14" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p3" id="drag14" src="p3.jpg"></div>
+<div id="div15" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag15" src="p1.jpg"></div>
+<div id="div16" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p2" id="drag16" src="p2.jpg"></div>
+<div id="div17" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p1" id="drag17" src="p1.jpg"></div>
+<div id="div18" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p6" id="drag18" src="p6.jpg"></div>
+
+<div id="div19" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p8" id="drag19" src="p8.jpg"></div>
+<div id="div20" ondragover="allowDrop(event)"  draggable="true" ondrop="llega(event)" ondragstart="sale(event)"><img name="p2" id="drag20" src="p2.jpg"></div>
+
+<br><br>
+
+<!-- <img id="drag1" src="marcador.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69">-->
+<img id="error" src="La brja lola.jpg">
+</body>
+</html>

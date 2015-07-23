@@ -3,6 +3,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td {
+	color: blue;
+}
+tr:HOVER {
+	background: blue;
+	cursor: pointer;
+}
+
+</style>
 <script>
 var xmlHttp = null;
 
@@ -152,6 +166,19 @@ function listarTrabajadores()
 	<td><select id="empleados" ></select>
 	</td></tr>
 	<tr><td><input type="submit" value="Buscar Departamentos" onclick="rellenaCaja();"></td></tr>
+</table>
+
+<table id="tablaEmples">
+	<tr><th>NOMBRE</th><!--  value="empleado.FIRST_NAME"/ -->
+		<td id="tablaEmple" > <br /></td>
+	</tr>
+
+	
+	<tr><th>ID</th><!-- value="empleado.EMPLOYEE_ID"/> -->
+		<td>  <br /></td>
+
+	
+	</tr>
 </table>
  
 

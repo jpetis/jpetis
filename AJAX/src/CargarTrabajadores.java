@@ -57,13 +57,16 @@ public class CargarTrabajadores extends HttpServlet {
 			out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 			
 			out.println("<empleados>");
+			out.println("<tablaEmples>");
 			
 			while (rs.next())
 			{
 				out.println("<empleado>"+ rs.getString(1)+"</empleado>");
+				out.println("<tablaEmple>"+ rs.getString(1)+"</tablaEmple>");
+				
 			}
 			out.println("</empleados>");
-			
+			out.println("</tablaEmples>");
 			
 		} catch (Exception e) {
 			// TODO: handle exception
